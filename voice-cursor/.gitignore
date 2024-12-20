@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# For Google Cloud deployment
+app.yaml
+!app.yaml.template 

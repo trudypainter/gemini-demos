@@ -21,7 +21,7 @@ runtime: nodejs20
 # Environment variables
 env_variables:
   NODE_ENV: 'production'
-  NEXT_PUBLIC_GEMINI_API_KEY: AIzaSyAnoaFdc-bUbLwjX-EMzvLVGtfdFggn27c 
+  # GEMINI_API_KEY: {GOES HERE FOR DEPLOYING}
 
 
 # Network settings
