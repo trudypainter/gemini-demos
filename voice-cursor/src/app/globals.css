@@ -1,0 +1,113 @@
+/**
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    /* Novel highlight colors */
+    --novel-highlight-default: #ffffff;
+    --novel-highlight-purple: rgba(147, 51, 234, 0.2);
+    --novel-highlight-red: rgba(224, 0, 0, 0.2);
+    --novel-highlight-yellow: rgba(234, 179, 8, 0.2);
+    --novel-highlight-blue: rgba(37, 99, 235, 0.2);
+    --novel-highlight-green: rgba(0, 138, 0, 0.2);
+    --novel-highlight-orange: rgba(255, 165, 0, 0.2);
+    --novel-highlight-pink: rgba(186, 64, 129, 0.2);
+    --novel-highlight-gray: rgba(168, 162, 158, 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Tippy tooltip styles */
+.tippy-box {
+  @apply bg-white border border-gray-200 shadow-lg rounded-md !important;
+}
+
+.tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+  @apply border-b-gray-200 !important;
+}
+
+/* Audio highlight styles */
+.audio-highlight-text {
+  position: relative;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin: 0px -4px;
+}
+
+mark {
+  border-radius: 8px !important;
+  padding: 8px 0px !important;
+}
+mark:hover {
+  cursor: pointer !important;
+}
+
+/* Add back the emoji styles */
+.audio-highlight-text::before {
+  content: attr(data-tone-emoji);
+  position: absolute;
+  top: -20px;
+  left: 6px;
+  font-size: 14px;
+  padding: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  line-height: 1;
+  font-size: 18px;
+}
