@@ -19,7 +19,7 @@ const Header = () => {
         
         <div className="flex items-center gap-3">
           <a
-            href="https://github.com/google/generative-ai-docs"
+            href="https://github.com/googlecreativelab/gemini-demos/tree/main/image-to-code"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2  text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors "
